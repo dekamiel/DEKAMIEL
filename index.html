@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="DEKAMIEL - MOTION DESIGN, COMPOSITING & VFX">
+    <meta name="keywords" content="Motion Design, Tittle Design, Compositing, VFX">
+    <meta name="author" content="Kamiel Konings">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>DEKAMIEL</title>
+
+    <script src="./scripts/loader.js"></script>
+    <script src="./scripts/contactSlider.js"></script>
+</head>
+
+
+<body onload="showLoader()" style="margin:0;">
+
+    <div id="loader">
+        <p>loading animation</p>
+    </div>
+
+    <header>
+        <p>Logo IDENT in de hoeken</p>
+        <p onclick="openContact()"> contact</p>
+        <p onclick="openContact()"> contact</p>
+        <p onclick="openContact()"> contact</p>
+        <p onclick="openContact()"> contact</p>
+    </header>
+
+    <div id="contactForm" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
+        <div class="overlay-content">
+            <p>Kamiel Konings</p>
+            <a href="send@dekamiel.com">send me an email</a>
+            <a href="+32499739161">call me and let the magic happen</a>
+        </div>
+    </div>
+
+    <main style="display: none;" id="webPage">
+        <p>Hier komen videos van mij</p>
+
+        <div class="VideoList">
+            <ul>
+                <li class="VideoPreview">
+                    <p>Showreal 2023</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Marvel 2023 Play4</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>De Mol Napoleon Games 2023</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Junior Bake Off Bakboek 2023</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Junior Bake Off Bakboek 2022</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Jasper De Ceuster - Polygon 2022</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Jasper De Ceuster - Polygon 2021</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Movie Integration</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Cyclocross 2021</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Junior Bake Off 2021</p>
+                </li>
+                <li class="VideoPreview">
+                    <p>Play4 Pridepromo Corona 2020</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>DEKAMIEL - IDENT</p>
+    </footer>
+</body>
+
+</html>
