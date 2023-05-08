@@ -22,33 +22,29 @@
 <body onload="showLoader()" style="margin:0;">
 
     <div id="loader">
-        <p>loading animation</p>
+        <h1>loading animation</h1>
     </div>
-
-    <header>
-        <p>Logo IDENT in de hoeken</p>
-        <p onclick="openContact()"> contact</p>
-        <p onclick="openContact()"> contact</p>
-        <p onclick="openContact()"> contact</p>
-        <p onclick="openContact()"> contact</p>
-    </header>
 
     <div id="contactForm" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
         <div class="overlay-content">
-            <p>Kamiel Konings</p>
-            <a href="send@dekamiel.com">send me an email</a>
+            <h2>Kamiel Konings</h2>
+            <a href="mailto:send@dekamiel.com">send me an email</a>
             <a href="+32499739161">call me and let the magic happen</a>
-            <a href="https://vimeo.com/dekamiel">vimeo</a>
-            <a href="https://linkedin.com/in/kamiel-konings-488b24180">LinkedIn</a>
+            <a href="https://vimeo.com/dekamiel" target="_blank">vimeo</a>
+            <a href="https://linkedin.com/in/kamiel-konings-488b24180" target="_blank">LinkedIn</a>
         </div>
     </div>
 
-    <main style="display: none;" id="webPage">
-        <p>Hier komen videos van mij</p>
-
-        <div class="VideoList">
-            <ul>
+    <div class="wrapper">
+        <div class="contact top">
+            <h2 onclick="openContact()"> contact</h2>
+        </div>
+        <div class="contact left">
+            <h2 onclick="openContact()"> contact</h2>
+        </div>
+        <div class="center" style="display: none;" id="webPage">
+            <ul class="video-list">
                 <li class="VideoPreview">
                     <p>Showreal 2023</p>
                 </li>
@@ -86,12 +82,15 @@
                     <p>Play4 Pridepromo Corona 2020</p>
                 </li>
             </ul>
-        </div>
-    </main>
 
-    <footer>
-        <p>DEKAMIEL - IDENT</p>
-    </footer>
+        </div>
+        <div class="contact bottom">
+            <h2 onclick="openContact()"> contact</h2>
+        </div>
+        <div class="contact right">
+            <h2 onclick="openContact()"> contact</h2>
+        </div>
+    </div>
 </body>
 
 </html>
