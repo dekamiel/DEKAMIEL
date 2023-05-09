@@ -1,4 +1,4 @@
-function decryptPhone() {
+/*function decryptPhone() {
     // replace '1234567890' with your phone number
     var phone = '+32499739161';
     
@@ -13,4 +13,9 @@ function decryptPhone() {
     // replace this with your own encryption algorithm
     var encryptedPhone = '+32499739161';
     return encryptedPhone;
-  }
+  }*/
+
+function decodePhoneNumber(encodedPhoneNumber) {
+  var decodedPhoneNumber = atob(encodedPhoneNumber);
+  window.location.href = 'tel:' + decodedPhoneNumber;
+}
