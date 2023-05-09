@@ -11,7 +11,6 @@ function decryptPhone() {
   
   function encryptPhone(phone) {
     // replace this with your own encryption algorithm
-    var encryptedPhone = '***-***-****';
+    var encryptedPhone = '+32499739161';
     return encryptedPhone;
   }
-  

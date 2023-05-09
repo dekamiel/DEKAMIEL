@@ -32,18 +32,19 @@
         <div class="overlay-content">
             <h1>Kamiel Konings</h1>
             <a id="encrypted-mailto-link" href="#" onclick="decryptMailto()">Mail me to set up a coffee meeting</a>
-            <a href="#" onclick="decryptPhone()">Call me and tell me how nice your coffee tastes</a>
+            <a id="phone-link" href="#" onclick="decryptPhone()">Call me and tell me how nice your coffee tastes</a>
             <a href="https://vimeo.com/dekamiel" target="_blank">Enjoy my videos with a coffee</a>
             <a href="https://linkedin.com/in/kamiel-konings-488b24180" target="_blank">Read my resume with a coffee</a>
+            <h3>*did you noticed I like coffee?</h3>
         </div>
     </div>
 
     <div class="wrapper">
         <div class="contact top">
-            <h2 onclick="openContact()">contact</h2>
+            <h2 onclick="openContact()">Contact</h2>
         </div>
         <div class="contact left">
-            <h2 onclick="openContact()">contact</h2>
+            <h2 onclick="openContact()">Contact</h2>
         </div>
         <div class="center" style="display: none;" id="webPage">
             <ul class="video-list">
@@ -86,13 +87,16 @@
             </ul>
 
         </div>
-        <div class="contact bottom">
-            <h2 onclick="openContact()">contact</h2>
+        <div class="contact bottom" style="display: none;">
+            <h2 onclick="openContact()">Contact</h2>
         </div>
         <div class="contact right">
-            <h2 onclick="openContact()">contact</h2>
+            <h2 onclick="openContact()">Contact</h2>
         </div>
     </div>
+    <footer>
+        <h4>DEKAMIEL © 2023 - Belgium - </h4><a id="encrypted-mailto-link" href="#" onclick="decryptMailto()">Get in touch!</a>
+    </footer>
 </body>
 
 </html>
