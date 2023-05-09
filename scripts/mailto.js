@@ -2,9 +2,9 @@ function decryptMailto() {
     // replace 'your-email@example.com' with your email address
     var email = 'send@dekamiel.com';
     // replace 'subject' with the desired email subject
-    var subject = 'We would love to work with you!';
+    var subject = 'Thanks for reaching out to us!';
     // replace 'body' with the desired email body
-    var body = 'Dear Kamiel';
+    var body = 'Dear Kamiel,';
 
     // create the encrypted mailto link
     var encryptedMailtoLink = 'mailto:' + encodeEmail(email) + '?subject=' + encodeText(subject) + '&body=' + encodeText(body);
