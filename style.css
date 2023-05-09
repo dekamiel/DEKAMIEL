@@ -23,7 +23,7 @@ body {
     background-color: black;
 }
 
-footer{
+footer {
     text-align: center;
     text-decoration: none;
 }
@@ -51,7 +51,8 @@ h3 {
     font-family: DINPro-LightItalic;
     font-size: 1.2em;
 }
-h4{
+
+h4 {
     color: #ffffffbe;
     font-family: DINPro-LightItalic;
     font-size: 0.8em;
@@ -82,32 +83,27 @@ a {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    display: inline;
     text-align: center;
 }
 
 .bottom {
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
 }
 
 .left {
-    top: 45%;
-    left: 0;
-    margin: 0px;
-    padding: 0px;
-    transform: translateY(-50%);
+    left: 40px;
+    top: 65%;
+    transform-origin: left;
     transform: rotate(-90deg);
-    display: inline;
+    text-align: center;
 }
 
 .right {
-    top: 45%;
-    right: 0;
-    transform: translateY(-50%);
+    right: 40px;
+    top: 65%;
+    transform-origin: right;
     transform: rotate(90deg);
-    display: inline;
 }
 
 .center {
@@ -154,24 +150,25 @@ a {
     .video-list li {
         width: 100%;
     }
+
     h1 {
         color: #ffffffbe;
         font-family: DINPro-BoldItalic;
         font-size: 2em;
     }
-    
+
     h2 {
         color: #ffffffbe;
         font-family: DINPro-BoldItalic;
         font-size: 1em;
     }
-    
+
     h3 {
         color: #ffffffbe;
         font-family: DINPro-LightItalic;
         font-size: 0.6em;
     }
-    
+
     a {
         color: #ffffffbe;
         font-family: DINPro-LightItalic;
