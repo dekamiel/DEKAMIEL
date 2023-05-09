@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="DEKAMIEL - MOTION DESIGN, COMPOSITING & VFX">
-    <meta name="keywords" content="Motion Design, Tittle Design, Compositing, VFX">
+    <meta name="keywords" content="Kamiel Konings, Motion Design, Tittle Design, Compositing, VFX">
     <meta name="author" content="Kamiel Konings">
 
     <link rel="stylesheet" href="style.css">
@@ -16,32 +16,34 @@
 
     <script src="./scripts/loader.js"></script>
     <script src="./scripts/contactSlider.js"></script>
+    <script src="./scripts/mailto.js"></script>
+    <script src="./scripts/mailto.js"></script>
 </head>
 
 
 <body onload="showLoader()" style="margin:0;">
 
     <div id="loader">
-        <h1>loading animation</h1>
+        <p>loading animation</p>
     </div>
 
     <div id="contactForm" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
         <div class="overlay-content">
-            <h2>Kamiel Konings</h2>
-            <a href="mailto:send@dekamiel.com">send me an email</a>
-            <a href="+32499739161">call me and let the magic happen</a>
-            <a href="https://vimeo.com/dekamiel" target="_blank">vimeo</a>
-            <a href="https://linkedin.com/in/kamiel-konings-488b24180" target="_blank">LinkedIn</a>
+            <h1>Kamiel Konings</h1>
+            <a id="encrypted-mailto-link" href="#" onclick="decryptMailto()">Mail me to set up a coffee meeting</a>
+            <a href="#" onclick="decryptPhone()">Call me and tell me how nice your coffee tastes</a>
+            <a href="https://vimeo.com/dekamiel" target="_blank">Enjoy my videos with a coffee</a>
+            <a href="https://linkedin.com/in/kamiel-konings-488b24180" target="_blank">Read my resume with a coffee</a>
         </div>
     </div>
 
     <div class="wrapper">
         <div class="contact top">
-            <h2 onclick="openContact()"> contact</h2>
+            <h2 onclick="openContact()">contact</h2>
         </div>
         <div class="contact left">
-            <h2 onclick="openContact()"> contact</h2>
+            <h2 onclick="openContact()">contact</h2>
         </div>
         <div class="center" style="display: none;" id="webPage">
             <ul class="video-list">
@@ -58,13 +60,13 @@
                     <p>Junior Bake Off Bakboek 2023</p>
                 </li>
                 <li class="VideoPreview">
-                    <p>Junior Bake Off Bakboek 2022</p>
+                    <p>Junior Bake Off bak boek 2022</p>
                 </li>
                 <li class="VideoPreview">
                     <p>Jasper De Ceuster - Polygon 2022</p>
                 </li>
                 <li class="VideoPreview">
-                    <p>Jasper De Ceuster - Polygon 2021</p>
+                    <p>Jasper De Ceuster - Origins 2021</p>
                 </li>
                 <li class="VideoPreview">
                     <p>Marvel Movie Integration</p>
@@ -85,10 +87,10 @@
 
         </div>
         <div class="contact bottom">
-            <h2 onclick="openContact()"> contact</h2>
+            <h2 onclick="openContact()">contact</h2>
         </div>
         <div class="contact right">
-            <h2 onclick="openContact()"> contact</h2>
+            <h2 onclick="openContact()">contact</h2>
         </div>
     </div>
 </body>

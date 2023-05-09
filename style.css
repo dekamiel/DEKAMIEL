@@ -2,24 +2,53 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: DINPro-BoldItalic;
+    src: url(fonts/DINPro-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: DINPro-LightItalic;
+    src: url(fonts/DINPro-LightItalic.otf);
+}
+
+@font-face {
+    font-family: Garamond-Medium-500;
+    src: url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+}
+
 body {
     margin: 0;
+    padding: 0;
     background-color: black;
 }
 
-h1 {
+p {
     color: crimson;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-family: DINPro-BoldItalic;
+    font-size: 3em;
 }
 
 h2 {
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: DINPro-BoldItalic;
+    font-size: 2em;
+}
+
+h3 {
+    color: white;
+    font-family: DINPro-BoldItalic;
+    font-size: 1em;
 }
 
 a {
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: DINPro-LightItalic;
+    font-size: 2em;
 }
 
 p {
@@ -37,8 +66,9 @@ p {
 
 .contact {
     position: absolute;
-    padding: 10px;
-    font-size: 14px;
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
 }
 
 .top {
@@ -74,18 +104,46 @@ p {
     text-align: center;
 }
 
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
 .video-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.video-list li a {
-    display: block;
+.video-list li {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .video-list li {
+        width: calc(50% - 10px);
+    }
+
+    .contact.left,
+    .contact.right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .video-list li {
+        width: 100%;
+    }
+
+    .contact.top {
+        display: none;
+    }
 }
 
 .overlay {
