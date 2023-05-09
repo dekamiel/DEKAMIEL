@@ -79,8 +79,9 @@ a {
 
 .top {
     top: 0;
-    left: 50%;
+    left: 43%;
     transform: translateX(-50%);
+    transform: rotate(180deg);
 }
 
 .bottom {
@@ -90,22 +91,22 @@ a {
 }
 
 .left {
-    top: 50%;
+    top: 45%;
     left: 0;
-    transform: translateY(-50%);
-    transform: rotate(-90deg);
-}
-
-.right {
-    top: 50%;
-    right: 0;
     transform: translateY(-50%);
     transform: rotate(90deg);
 }
 
+.right {
+    top: 45%;
+    right: 0;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+}
+
 .center {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     padding: 20px;
     text-align: center;
 }
@@ -129,6 +130,7 @@ a {
 .video-list li {
     width: calc(33.33% - 10px);
     margin-bottom: 20px;
+    padding: 25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -145,10 +147,6 @@ a {
 @media screen and (max-width: 600px) {
     .video-list li {
         width: 100%;
-    }
-
-    .contact.top {
-        display: none;
     }
     h1 {
         color: #ffffffbe;
