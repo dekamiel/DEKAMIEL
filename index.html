@@ -23,8 +23,8 @@
 
 <body onload="showLoader()" style="margin:0px; padding: 0px;">
 
-    <div id="loader">
-        <p>loading animation</p>
+    <div class="loader" id="loader">
+        <img src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" alt="DEKAMIEL LOGO IDENT">
     </div>
 
     <div id="contactForm" class="overlay">
@@ -45,18 +45,21 @@
         </div>
     </div>
 
-    <div class="contact top">
-        <h2 onclick="openContact()">CONTACT ME!</h2>
+    <div style="display: none;" id="webPage">
+        <div class="contact top" >
+            <h2 onclick="openContact()">CONTACT ME!</h2>
+        </div>
+        <div class="contact left">
+            <h2 onclick="openContact()">EMAIL ME!</h2>
+        </div>
+        <div class="contact bottom" style="display: none;">
+            <h2 onclick="openContact()">Contact</h2>
+        </div>
+        <div class="contact right">
+            <h2 onclick="openContact()">CALL ME!</h2>
+        </div>
     </div>
-    <div class="contact left">
-        <h2 onclick="openContact()">EMAIL ME!</h2>
-    </div>
-    <div class="contact bottom" style="display: none;">
-        <h2 onclick="openContact()">Contact</h2>
-    </div>
-    <div class="contact right">
-        <h2 onclick="openContact()">CALL ME!</h2>
-    </div>
+
 
     <div class="wrapper">
         <div class="center" style="display: none;" id="webPage">

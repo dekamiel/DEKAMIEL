@@ -29,14 +29,17 @@ footer {
 }
 
 p {
-    color: crimson;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Garamond-Medium-500;
+    color:white;
 }
 
 h1 {
     color: #ffffffbe;
     font-family: DINPro-BoldItalic;
     font-size: 3em;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: white;
 }
 
 h2 {
@@ -44,6 +47,9 @@ h2 {
     font-family: DINPro-BoldItalic;
     font-size: 4em;
     display: inline;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: white;
 }
 
 h3 {
@@ -63,6 +69,12 @@ a {
     font-family: DINPro-LightItalic;
     font-size: 2em;
     text-decoration: none;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    padding: 150px;
 }
 
 .wrapper {
