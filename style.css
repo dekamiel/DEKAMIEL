@@ -25,6 +25,7 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     background-color: black;
 }
 
@@ -35,16 +36,13 @@ footer {
 
 p {
     font-family: Garamond-Medium-500;
-    color:white;
+    color: white;
 }
 
 h1 {
     color: #ffffffbe;
     font-family: DINPro-BoldItalic;
     font-size: 3em;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: white;
 }
 
 h2 {
@@ -76,10 +74,13 @@ a {
     text-decoration: none;
 }
 
-.loader{
-    justify-content: center;
-    display: flex;
-    height: 100vh;
+.loadingscreen img{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
 }
 
 .wrapper {
@@ -136,21 +137,6 @@ a {
     max-width: 800px;
     padding: 20px;
     text-align: center;
-}
-
-.video-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.video-list li {
-    width: calc(33.33% - 10px);
-    margin-bottom: 20px;
-    padding: 25px;
 }
 
 @media screen and (max-width: 768px) {

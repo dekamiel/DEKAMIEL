@@ -21,30 +21,14 @@
 </head>
 
 
-<body onload="showLoader()" style="margin:0px; padding: 0px;">
+<body onload="showLoader()">
 
-    <div class="loader" id="loader">
+    <div class="loadingscreen" id="loader">
         <img src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" alt="DEKAMIEL LOGO IDENT">
     </div>
 
-    <div id="contactForm" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
-        <div class="overlay-content">
-            <h1>Kamiel Konings</h1>
-            <a id="encrypted-mailto-link" href="#" onclick="decryptMailto()">Mail me to set up a coffee meeting</a>
-            <!--<a id="phone-link" href="#" onclick="decryptPhone()">Call me and tell me how nice your coffee tastes</a>-->
-            <a href="#" onclick="decodePhoneNumber('KzMyNDk5NzM5MTYx')">Call me and tell me how nice your coffee
-                tastes</a>
-            <a href="https://vimeo.com/dekamiel" target="_blank">Enjoy my videos with a coffee</a>
-            <a href="https://linkedin.com/in/kamiel-konings-488b24180" target="_blank">Read my resume with a coffee</a>
-            <br>
-            <br>
-            <br>
-            <h3>*did you noticed I like coffee?</h3>
-        </div>
-    </div>
-
     <div style="display: none;" id="webPage">
+
         <div class="contact top">
             <h2 onclick="openContact()">CONTACT ME!</h2>
         </div>
@@ -58,67 +42,34 @@
             <h2 onclick="openContact()">CALL ME!</h2>
         </div>
 
-
+        <div id="contactForm" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
+            <div class="overlay-content">
+                <h1>Kamiel Konings</h1>
+                <a id="encrypted-mailto-link" href="#" onclick="decryptMailto()">Mail me to set up a coffee meeting</a>
+                <a href="#" onclick="decodePhoneNumber('KzMyNDk5NzM5MTYx')">Call me and tell me how nice your coffee
+                    tastes</a>
+                <a href="https://vimeo.com/dekamiel" target="_blank">Enjoy my videos with a coffee</a>
+                <a href="https://linkedin.com/in/kamiel-konings-488b24180" target="_blank">Read my resume with a
+                    coffee</a>
+                <br>
+                <br>
+                <br>
+                <h3>*did you noticed I like coffee?</h3>
+            </div>
+        </div>
 
         <div class="wrapper">
             <div class="center">
-                <ul class="video-list">
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Showreal 2023</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Marvel 2023 Play4</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>De Mol Napoleon Games 2023</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Junior Bake Off Bakboek 2023</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Junior Bake Off bak boek 2022</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Jasper De Ceuster - Polygon 2022</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Jasper De Ceuster - Origins 2021</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Marvel Movie Integration</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>De Slimste Mens ter Wereld</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Cyclocross 2021</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Junior Bake Off 2021</p>
-                    </li>
-                    <li>
-                        <iframe src="./images/DEKAMIEL-LOGO-IDENT-3D-SQ.gif" frameborder="0"></iframe>
-                        <p>Play4 Pridepromo Corona 2020</p>
-                    </li>
-                </ul>
+                <video src=""></video>
             </div>
         </div>
+
+        <footer>
+            <h4>DEKAMIEL © 2023 - Belgium -</h4>
+            <h4 onclick="openContact()"> Get in touch! </h4>
+        </footer>
     </div>
-    <footer>
-        <h4>DEKAMIEL © 2023 - Belgium -</h4>
-        <h4 onclick="openContact()"> Get in touch! </h4>
-    </footer>
 </body>
 
 </html>
