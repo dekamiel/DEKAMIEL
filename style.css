@@ -3,6 +3,11 @@
 }
 
 @font-face {
+    font-family: DINPro-BlackItalic;
+    src: url(fonts/DINPro-BlackItalic.otf);
+}
+
+@font-face {
     font-family: DINPro-BoldItalic;
     src: url(fonts/DINPro-BoldItalic.otf);
 }
@@ -44,8 +49,8 @@ h1 {
 
 h2 {
     color: #ffffffbe;
-    font-family: DINPro-BoldItalic;
-    font-size: 4em;
+    font-family: DINPro-BlackItalic;
+    font-size: 6em;
     display: inline;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
     -webkit-text-stroke-width: 0.4px;
@@ -72,9 +77,9 @@ a {
 }
 
 .loader{
-    display: flex;
     justify-content: center;
-    padding: 150px;
+    display: flex;
+    height: 100vh;
 }
 
 .wrapper {
@@ -94,6 +99,7 @@ a {
 .top {
     top: 0;
     left: 50%;
+    transform-origin: bottom;
     transform: translateX(-50%);
     text-align: center;
 }
@@ -104,16 +110,16 @@ a {
 }
 
 .left {
-    left: 40px;
-    top: 65%;
+    left: 0px;
+    top: 75%;
     transform-origin: left;
     transform: rotate(-90deg);
     text-align: center;
 }
 
 .right {
-    right: 40px;
-    top: 65%;
+    right: 0px;
+    top: 70%;
     transform-origin: right;
     transform: rotate(90deg);
 }
