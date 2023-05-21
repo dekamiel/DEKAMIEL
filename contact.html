@@ -1,0 +1,35 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+</head>
+<body>
+    <div class="contact">
+        <h2 onclick="openContact()">EMAIL ME!</h2>
+    </div>
+    <div class="contact">
+        <h2 onclick="openContact()">CALL ME!</h2>
+    </div>
+
+    <div id="contactForm" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
+        <div class="overlay-content">
+            <h1>Kamiel Konings</h1>
+            <a id="encrypted-mailto-link" href="#" onclick="decryptMailto()">Mail me to set up a coffee meeting</a>
+            <a href="#" onclick="decodePhoneNumber('KzMyNDk5NzM5MTYx')">Call me and tell me how nice your coffee
+                tastes</a>
+            <a href="https://vimeo.com/dekamiel" target="_blank">Enjoy my videos with a coffee</a>
+            <a href="https://linkedin.com/in/kamiel-konings-488b24180" target="_blank">Read my resume with a
+                coffee</a>
+            <br>
+            <br>
+            <br>
+            <h3>*did you noticed I like coffee?</h3>
+        </div>
+    </div>
+</body>
+</html>

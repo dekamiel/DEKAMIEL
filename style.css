@@ -1,229 +1,155 @@
-* {
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: DINPro-BlackItalic;
-    src: url(fonts/DINPro-BlackItalic.otf);
-}
-
-@font-face {
-    font-family: DINPro-BoldItalic;
-    src: url(fonts/DINPro-BoldItalic.otf);
-}
-
-@font-face {
-    font-family: DINPro-LightItalic;
-    src: url(fonts/DINPro-LightItalic.otf);
-}
-
-@font-face {
-    font-family: Garamond-Medium-500;
-    src: url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
-}
-
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black;
 }
 
+header {
+  background-color: blue;
+}
 
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main {
+  margin: 0;
+  padding: 0;
+  background-color: green;
 }
 
 footer {
-    text-align: center;
-    text-decoration: none;
-    bottom: 0;
-    left: 50%;
-}
-
-p {
-    font-family: Garamond-Medium-500;
-    color: white;
+  background-color: royalblue;
 }
 
 h1 {
-    color: #ffffffbe;
-    font-family: DINPro-BoldItalic;
-    font-size: 3em;
+  color: white;
 }
 
 h2 {
-    color: #ffffffbe;
-    font-family: DINPro-BlackItalic;
-    font-size: 3em;
-    display: inline;
+  color: white;
 }
 
-h3 {
-    color: #ffffffbe;
-    font-family: DINPro-LightItalic;
-    font-size: 1.2em;
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
 }
 
-h4 {
-    color: #ffffffbe;
-    font-family: DINPro-LightItalic;
-    font-size: 0.8em;
+#lottie {
+  width: 50%;
+  height: 50%;
 }
 
-a {
-    color: #ffffffbe;
-    font-family: DINPro-LightItalic;
-    font-size: 2em;
-    text-decoration: none;
+#homepage {
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
-.loadingscreen img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background-color: black;
+}
+
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 960px;
+  /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: red;
+}
+
+.video-item {
+  width: calc(33.33% - 10px);
+  /* Adjust the width and spacing as needed */
+  margin-bottom: 20px;
+  /* Adjust the spacing between videos */
+}
+
+.video-item video {
+  width: 100%;
+  height: auto;
+}
+
+#content {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+
+  margin-top: 100vh;
+  background-color: orange;
 }
 
 .contact {
-    position: fixed;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    z-index: 998; /* Ensures the contact words appear above the video */
-  }
-
-.contact-left {
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%) rotate(-90deg);
-}
-
-.contact-top {
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.contact-right {
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%) rotate(90deg);
-}
-
-.video-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .video-container video {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-.video-list{
-    margin: 50px;
-}
-
-.item-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-}
-
-.item {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .video-list li {
-        width: calc(50% - 10px);
-    }
-
-    .contact.left,
-    .contact.right {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .video-list li {
-        width: 100%;
-    }
-
-    h1 {
-        color: #ffffffbe;
-        font-family: DINPro-BoldItalic;
-        font-size: 2em;
-    }
-
-    h2 {
-        color: #ffffffbe;
-        font-family: DINPro-BoldItalic;
-        font-size: 1em;
-    }
-
-    h3 {
-        color: #ffffffbe;
-        font-family: DINPro-LightItalic;
-        font-size: 0.6em;
-    }
-
-    a {
-        color: #ffffffbe;
-        font-family: DINPro-LightItalic;
-        font-size: 1em;
-    }
+  position: fixed;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 998;
+  /* Ensures the contact words appear above the video */
 }
 
 .overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
-    z-index: 999;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  z-index: 999;
 }
 
 .overlay-content {
-    position: relative;
-    top: 20%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
 .overlay a:hover,
 .overlay a:focus {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
