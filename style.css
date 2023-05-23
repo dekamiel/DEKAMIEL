@@ -7,8 +7,8 @@ body {
 
 header {
   margin: 0;
-  padding: 25px;
-  background-color: black;
+  padding: 0;
+  text-align: center;
 }
 
 main {
@@ -35,7 +35,7 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h3{
+h3 {
   color: white;
   font-size: 1.3em;
   font-family: Arial, Helvetica, sans-serif;
@@ -75,7 +75,6 @@ h3{
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  background-color: black;
 }
 
 #video {
@@ -86,23 +85,32 @@ h3{
   height: 100%;
 }
 
+.logo {
+  display: inline-block;
+  width: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  fill: white;
+}
+
 .video-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 960px;
-  /* Adjust the maximum width as needed */
+  max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
-  background-color: black;
+  padding: 0px;
 }
 
 .video-item {
-  width: calc(33.33% - 10px);
-  /* Adjust the width and spacing as needed */
-  margin-bottom: 20px;
-  /* Adjust the spacing between videos */
+  width: 100%;
+  max-width: calc(33.33%);
+  margin-bottom: 0px;
+  position: relative;
 }
 
 .video-item video {
@@ -110,14 +118,51 @@ h3{
   height: auto;
 }
 
+.video-thumbnail {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.video-thumbnail:hover {
+  transform: scale(0.95);
+}
+
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.video-popup video {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.video-popup.active {
+  display: flex;
+}
+
 #content {
   margin: 0;
   padding: 0;
   text-align: center;
   color: #fff;
-
   margin-top: 100vh;
-  background-color: black;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%);
 }
 
 .contact {
@@ -126,7 +171,6 @@ h3{
   font-size: 24px;
   font-weight: bold;
   z-index: 998;
-  /* Ensures the contact words appear above the video */
 }
 
 .overlay {
@@ -168,4 +212,36 @@ h3{
   top: 20px;
   right: 45px;
   font-size: 60px;
+}
+
+@media (max-width: 768px) {
+
+  .video-list {
+    max-width: 960px;
+  }
+
+  .video-item {
+    max-width: calc(100%);
+  }
+}
+
+@media (max-width: 1920px) {
+  .video-list {
+    max-width: 100%;
+  }
+
+  .video-item {
+    max-width: calc(50%);
+  }
+}
+
+@media (min-width: 1921px) {
+
+  .video-list {
+    max-width: 100%;
+  }
+
+  .video-item {
+    max-width: calc(33.33%);
+  }
 }
