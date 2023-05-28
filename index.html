@@ -186,6 +186,7 @@
 
                 videoPopup.src = videoSrc;
                 document.querySelector('.video-popup').classList.add('active');
+                videoPopup.muted = false; 
                 videoPopup.play();
             });
         });
