@@ -28,7 +28,7 @@ footer {
 
 h1 {
   color: white;
-  font-size: 2.5em;
+  font-size: 4em;
   font-family: 'Libre Baskerville';
 }
 
@@ -103,6 +103,20 @@ a {
   height: 100%;
 }
 
+.title{
+  padding-top: 65px;
+}
+
+.info{
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.infolink{
+  padding-top: 25px;
+  padding-bottom: 100px;
+}
+
 .logo {
   display: inline-block;
   width: 40%;
@@ -128,7 +142,8 @@ svg {
 .video-item {
   width: 100%;
   max-width: calc(50%);
-  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0px;
   position: relative;
 }
 
@@ -147,6 +162,8 @@ svg {
 .video-thumbnail img {
   width: 100%;
   height: auto;
+  margin: 0px;
+  padding: 0px;
 }
 
 .video-thumbnail:hover {
