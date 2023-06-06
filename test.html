@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="color-changing-heading">Smooth Color Transition</h1>
+</body>
+<script>
+    var headingElement = document.getElementById('color-changing-heading');
+    var startColor = '#6ca1c6'; // Starting color in HEX format
+    var endColor = '#ffffff'; // Ending color in HEX format
+    var duration = 3000; // Transition duration in milliseconds
+
+    var startTime = null;
+    var direction = 1;
+
+    function changeHeadingColor(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = timestamp - startTime;
+
+        // Calculate the current color based on progress
+        var currentColor = interpolateColor(startColor, endColor, progress, duration);
+
+        // Apply the current color to the heading element
+        headingElement.style.color = currentColor;
+
+        if (progress >= duration) {
+            // Reverse the direction when reaching the end color
+            direction = -direction;
+            startTime = timestamp;
+        }
+
+        // Continue the color transition animation
+        requestAnimationFrame(changeHeadingColor);
+    }
+
+    function interpolateColor(start, end, progress, duration) {
+        var startColor = parseColor(start);
+        var endColor = parseColor(end);
+
+        var currentColor = [];
+        for (var i = 0; i < 3; i++) {
+            var colorComponent = Math.round(startColor[i] + (endColor[i] - startColor[i]) * (progress / duration));
+            currentColor.push(colorComponent);
+        }
+
+        return 'rgb(' + currentColor.join(',') + ')';
+    }
+
+    function parseColor(color) {
+        var hex = color.replace('#', '');
+        var r = parseInt(hex.substr(0, 2), 16);
+        var g = parseInt(hex.substr(2, 2), 16);
+        var b = parseInt(hex.substr(4, 2), 16);
+
+        return [r, g, b];
+    }
+
+    // Start the color transition animation
+    requestAnimationFrame(changeHeadingColor);
+
+</script>
+
+</html>
