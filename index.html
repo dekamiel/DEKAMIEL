@@ -70,10 +70,10 @@
                 <h3>*did you noticed I like coffee?</h3>
             </div>
         </div>
-
+        
         <div id="video-container">
             <video id="video" autoplay muted loop>
-                <source src="./video/DEKAMIEL IDENT HD - GFX_v01.mp4" type="video/mp4">
+                <source src="" type="video/mp4">
             </video>
         </div>
 
@@ -191,6 +191,27 @@
         </div>
     </div>
 
+    <script>
+        var videoElement = document.getElementById('video');
+
+        function updateVideoSource() {
+            var screenWidth = window.innerWidth;
+
+            if (screenWidth > 768) {
+                videoElement.src = './video/DEKAMIEL IDENT HD - GFX_v01.mp4';
+            } else {
+                videoElement.src = './video/DEKAMIEL IDENT INSTA - GFX_v01.mp4';
+            }
+        }
+
+        // Update video source initially
+        updateVideoSource();
+
+        // Update video source on window resize
+        window.addEventListener('resize', function () {
+            updateVideoSource();
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var loadingScreen = document.getElementById('loading-screen');

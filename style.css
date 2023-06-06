@@ -108,6 +108,8 @@ a {
 }
 
 .info{
+  padding-left: 30px;
+  padding-right: 30px;
   padding-top: 65px;
   padding-bottom: 65px;
 }
@@ -251,6 +253,35 @@ svg {
 
 @media (max-width: 768px) {
 
+  #lottie {
+    width: 110%;
+    height: 110%;
+  }
+
+  h1 {
+    color: white;
+    font-size: 1.8em;
+    font-family: 'Libre Baskerville';
+  }
+  
+  h2 {
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Libre Baskerville';
+  }
+  
+  h3 {
+    color: white;
+    font-size: 0.7em;
+    font-family: 'Libre Baskerville';
+  }
+  
+  p {
+    color: white;
+    font-size: 1em;
+    font-family: 'Lora';
+  }
+
   .video-list {
     max-width: 100%;
   }
@@ -261,6 +292,12 @@ svg {
 }
 
 @media (min-width: 1441px) {
+
+  #lottie {
+    width: 80%;
+    height: 80%;
+  }
+
   .video-list {
     max-width: 100%;
   }
