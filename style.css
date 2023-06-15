@@ -290,7 +290,7 @@ svg {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #72CBDB;
+  color: #def200;
 }
 
 .overlay .closebtn {
@@ -415,7 +415,7 @@ svg {
   
   a:hover,
   a:focus {
-    color: #72CBDB;
+    color: #def200;
   }
 
   #lottie {
