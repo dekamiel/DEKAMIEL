@@ -8,8 +8,38 @@
     <title>Document</title>
 </head>
 
+<style>
+
+    body{
+        background-color: black;
+    }
+    .blocked-text {
+        position: relative;
+        display: inline-block;
+    }
+
+    .blocked-text::before {
+        content: "";
+        position: absolute;;
+        left: -10%;
+        right: -10%;
+        height: 0;
+        background-color: #def200;
+        transform-origin: bottom;
+        transition: height 0.3s ease;
+        z-index: -1;
+    }
+
+    .blocked-text:hover::before {
+        height: 50%;
+    }
+</style>
+
 <body>
     <h1 id="color-changing-heading">Smooth Color Transition</h1>
+
+    <div class="blocked-text"><h1> with Blocked Background</h1></div>
+
 </body>
 <script>
     var headingElement = document.getElementById('color-changing-heading');
@@ -65,10 +95,9 @@
     // Start the color transition animation
     requestAnimationFrame(changeHeadingColor);
 
+    // Color #def200 -> Yellow
+    // Color #72CBDB -> Blue
+
 </script>
 
 </html>
-
-
-// Color #D6F200 -> Yellow
-// Color #72CBDB -> Blue

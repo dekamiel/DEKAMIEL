@@ -32,7 +32,7 @@ footer a{
 
 h1 {
   color: #d4d4d4;
-  font-size: 4em;
+  font-size: 3em;
   font-family: 'Libre Baskerville';
   transition: 0.3s;
 }
@@ -44,7 +44,7 @@ h1:focus {
 
 h2 {
   color: white;
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: 'Libre Baskerville';
 }
 
@@ -56,7 +56,7 @@ h3 {
 
 p {
   color: #818181;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: 'Lora';
   transition: 0.3s;
 }
@@ -69,13 +69,34 @@ p:focus {
 a {
   color: #c3c3c3;
   font-family: 'Lora';
-  font-size: 2em;
+  font-size: 1.2em;
   transition: 0.3s;
 }
 
 a:hover,
 a:focus {
-  color: #72CBDB;
+  color: #d8d8d8;
+}
+
+.blocked-text {
+  position: relative;
+  display: inline-block;
+}
+
+.blocked-text::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 0%;
+  right: 0%;
+  height: 0;
+  background-color: #def200;
+  transform-origin: bottom;
+  transition: height 0.3s ease;
+}
+
+.blocked-text:hover::before {
+  height: 20%;
 }
 
 #loading-screen {
@@ -144,7 +165,7 @@ a:focus {
 }
 
 .infolink a{
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 
 .logo {
@@ -341,13 +362,69 @@ svg {
   .video-item {
     max-width: calc(100%);
   }
+
+  .video-popup video {
+    max-width: 90%;
+    max-height: 90%;
+  }
 }
 
 @media (min-width: 1441px) {
+  h1 {
+    color: #d4d4d4;
+    font-size: 4em;
+    font-family: 'Libre Baskerville';
+    transition: 0.3s;
+  }
+  
+  h1:hover,
+  h1:focus {
+    color: #ffffff;
+  }
+  
+  h2 {
+    color: white;
+    font-size: 3em;
+    font-family: 'Libre Baskerville';
+  }
+  
+  h3 {
+    color: white;
+    font-size: 0.7em;
+    font-family: 'Libre Baskerville';
+  }
+  
+  p {
+    color: #818181;
+    font-size: 1.4em;
+    font-family: 'Lora';
+    transition: 0.3s;
+  }
+  
+  p:hover,
+  p:focus {
+    color: #d8d8d8;
+  }
+  
+  a {
+    color: #c3c3c3;
+    font-family: 'Lora';
+    font-size: 2em;
+    transition: 0.3s;
+  }
+  
+  a:hover,
+  a:focus {
+    color: #72CBDB;
+  }
 
   #lottie {
     width: 80%;
     height: 80%;
+  }
+
+  .infolink a{
+    font-size: 1.8em;
   }
 
   .video-list {
@@ -356,5 +433,9 @@ svg {
 
   .video-item {
     max-width: calc(33.33%);
+  }
+
+  footer a{
+    font-size: 1em;
   }
 }
