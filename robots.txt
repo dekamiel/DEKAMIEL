@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /video/
-Disallow: /images/thumb/
-
-Sitemap: https://dekamiel.com/sitemap.xml

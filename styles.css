@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+    font-family: Arial
+}
+
+.viewport {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.stage {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.video-shell {
+    width: min(70vw, calc(100vh*16/9));
+    aspect-ratio: 16/9;
+    background: #000;
+    position: relative
+}
+
+.showreel-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+    display: block
+}
+
+.sound-toggle {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2;
+    appearance: none;
+    border: 0;
+    background: rgba(255, 255, 255, .88);
+    color: #000;
+    padding: 10px 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    text-transform: lowercase
+}
+
+@media(orientation:portrait) {
+    .stage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg)
+    }
+
+    .video-shell {
+        width: min(100vh, calc(100vw*16/9))
+    }
+}
+
+.contact-links {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px
+}
+
+a {
+    font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a.link-one:hover {
+    color: red;
+    text-decoration: none;
+}
+
+a.link-two:hover {
+    color: green;
+    text-decoration: none;
+}
+
+a.link-three:hover {
+    color: blue;
+    text-decoration: none;
+}
