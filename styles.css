@@ -76,26 +76,33 @@ body {
 }
 
 a {
-    font-family: "Libre Baskerville", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
     color: black;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.4s ease-in-out;
+    font-family: "Libre Baskerville", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
-a.link-one:hover {
-    color: red;
-    text-decoration: none;
+a:hover {
+    animation: colorCycle 3s ease-in-out forwards;
 }
 
-a.link-two:hover {
-    color: green;
-    text-decoration: none;
-}
+@keyframes colorCycle {
+    0% {
+        color: blue;
+    }
 
-a.link-three:hover {
-    color: blue;
-    text-decoration: none;
+    33% {
+        color: yellow;
+    }
+
+    66% {
+        color: red;
+    }
+
+    100% {
+        color: black;
+    }
 }

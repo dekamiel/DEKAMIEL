@@ -2,6 +2,13 @@
 <html lang="nl-BE">
 
 <head>
+  <title>Redirecting...</title>
+
+  <!-- SEO -->
+  <link rel="alternate" hreflang="en" href="https://dekamiel.com/en/">
+  <link rel="alternate" hreflang="fr" href="https://dekamiel.com/fr/">
+  <link rel="alternate" hreflang="nl" href="https://dekamiel.com/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://dekamiel.com/">
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -69,6 +76,24 @@
 </head>
 
 <body>
+  <script>
+    const savedLang = localStorage.getItem('preferredLang');
+
+    if (savedLang) {
+      window.location.href = '/' + savedLang + '/';
+    } else {
+      const lang = navigator.language || navigator.userLanguage;
+      const langCode = lang.toLowerCase();
+
+      if (langCode.startsWith('fr')) {
+        window.location.href = '/fr/';
+      } else if (langCode.startsWith('nl')) {
+        window.location.href = '/nl/';
+      } else {
+        window.location.href = '/en/';
+      }
+    }
+  </script>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRB6X5TP" height="0" width="0"
