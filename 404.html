@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Oops! Page Not Found</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Libre Baskerville", serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 80px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 20px 0;
+      color: #ccc;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      animation: colorCycle 3s ease-in-out forwards;
+    }
+
+    @keyframes colorCycle {
+      0% {
+        color: blue;
+      }
+
+      33% {
+        color: yellow;
+      }
+
+      66% {
+        color: red;
+      }
+
+      100% {
+        color: black;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <p>Oops! This page doesn’t exist.</p>
+    <a href="/">Back to home</a>
+  </div>
+</body>
+
+</html>
